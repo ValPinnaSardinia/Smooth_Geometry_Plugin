@@ -1,7 +1,7 @@
 # Smooth_Geometry_Plugin
 
 
-![image](https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin/blob/main/images/smooth_geometry.png)
+![image](https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin/blob/main/images/smooth_geometry2.png)
 
 Version 1.0
 
