@@ -13,7 +13,7 @@ email=pinnavalerio@yahoo.co.uk
 about=This plugin smooths a selected geometry. A Configuration dialog permits to change the smoothing settings (iterations, offset, minimumDistance and maxAngle).
 
 tracker=http://bugs
-repository=http://repo
+repository=https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin
 # End of mandatory metadata
 
 # Recommended items:
@@ -40,7 +40,7 @@ deprecated=False
 # plugin_dependencies=
 
 Category of the plugin: Raster, Vector, Database or Web
-# category=
+# category= Vector
 
 # If the plugin can run on QGIS Server.
 server=False
