@@ -12,7 +12,7 @@ email=pinnavalerio@yahoo.co.uk
 
 about=This plugin smooths a selected geometry. A Configuration dialog permits to change the smoothing settings (iterations, offset, minimumDistance and maxAngle).
 
-tracker=http://bugs
+tracker=https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin/issues
 repository=https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin
 # End of mandatory metadata
 
