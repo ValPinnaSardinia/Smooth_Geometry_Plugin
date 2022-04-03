@@ -5,4 +5,4 @@
 
 Version 1.0
 
-This plugin smooths a selected geometry. A Configuration dialog permits to change the smoothing settings (iterations, offset, minimumDistance and maxAngle).
+This plugin smooths a selected geometry. A Configuration dialog window permits to change the smoothing settings (iterations, offset, minimumDistance and maxAngle).
