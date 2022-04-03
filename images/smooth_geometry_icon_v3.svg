@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="smooth_geometry_icon_v3.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   id="svg16"
+   version="1.1"
+   viewBox="0 0 240 240"
+   height="240mm"
+   width="240mm"
+   inkscape:export-filename="C:\Users\pinna\Dropbox\OAE_Office_VP\Utilities_office_Scripts\QGIS_Plugins\Smooth_Geometry\smooth_geometry_icon_v3.png"
+   inkscape:export-xdpi="2.6420341"
+   inkscape:export-ydpi="2.6420341">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="32"
+     inkscape:window-x="-8"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="601.23716"
+     inkscape:cx="505.29957"
+     inkscape:zoom="0.7"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:inline"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       style="fill:none;stroke:#fdff00;stroke-width:8.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:25.995,8.665;stroke-dashoffset:0"
+       d="M 120.5744,13.985119 7.5595238,228.29762 230.94345,227.91964 120.5744,13.985119"
+       id="path30"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-xdpi="102.373"
+       inkscape:export-ydpi="102.373" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#1fbeff;stroke-width:10.865;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 101.67559,61.232142 c 0,0 -11.331024,17.769943 -25.3244,44.223218 -2.049403,3.87422 -9.3257,16.45303 -18.142857,35.52975 -1.427217,3.08792 -14.741071,29.10417 -21.166666,41.57739 -1.012794,1.96601 -6.215332,10.82072 -7.198936,17.12418 -1.201798,7.70177 1.47298,15.9113 4.175124,18.40558 2.58309,2.38439 4.558738,4.75182 11.700978,6.30658 6.676534,1.45338 18.389587,1.95325 21.938903,2.29238 5.478464,0.52346 34.395834,1.22842 49.892864,0.85044 8.34728,-0.2036 51.78273,0 59.72023,-0.75595 7.9375,-0.75595 32.8041,-3.04014 33.2619,-9.4494 0.75596,-10.58334 -5.66964,-23.43453 -5.66964,-23.43453 C 198.4375,174.24702 179.28702,135.2396 176.31246,129.203 163.46127,103.12265 151.94643,81.642856 150.8125,78.997023 150.11151,77.36138 145.36708,65.840639 137.46993,58.756078 c -4.87737,-4.375504 -13.99672,-5.889857 -15.00565,-5.839411 -15.11904,0.755949 -20.78869,8.315475 -20.78869,8.315475"
+       id="path48"
+       sodipodi:nodetypes="csssssssssssssssc" />
+  </g>
+  <g
+     inkscape:label="Layer 2"
+     id="layer2"
+     inkscape:groupmode="layer" />
+  <g
+     inkscape:label="Layer 3"
+     id="layer3"
+     inkscape:groupmode="layer" />
+</svg>
