@@ -5,6 +5,6 @@
 
 Version 1.0
 
-This plugin smooths a selected geometry. A Configuration dialog window permits to change the smoothing settings (iterations, offset, minimumDistance and maxAngle).
+This plugin smooths the selected geometries. A configuration dialog permits to change the smoothing settings (iterations, offset, minimumDistance and maxAngle).
 
 qgisMinimumVersion=3.0
