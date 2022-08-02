@@ -212,44 +212,54 @@ class SmoothGeometry:
       
 
     def run(self):
-     
+        
         settings = QSettings
         itera = iterations()      
         offset_new_value= offset()
         mindistance_new_value= minDistance()
         maxangle_new_value=maxAngle()
         
-        layer = iface.activeLayer()
-        layer.startEditing()
-        layer.beginEditCommand("Smooth Geometry")
         
-        if layer is not None:
-                                         
+        """Run method that performs all the real work"""
+        layers_list = QgsProject.instance().mapLayers()
+        
+        if len(layers_list)!= 0:                            
             
-            for f in layer.selectedFeatures():
-                feat_to_change=[]
-                g = f.geometry()
-                
-                
-                sm = g.smooth(
-                #iterations
-                itera,
-                #offset
-                offset_new_value,
-                #MinDistance
-                mindistance_new_value,
-                #maxAngle
-                maxangle_new_value)                  
-                
-                feat_to_change.append(f.id())
-                feat_to_change.append(sm)
-     
-                layer.changeGeometry(feat_to_change[0],feat_to_change[1])
-           
+            layer = iface.activeLayer()
+            if layer is not None:
+                if layer.type() != QgsVectorLayer.VectorLayer:
+                    return self.dontdonothing()
+ 
+                if layer.type() == QgsVectorLayer.VectorLayer:
+
+                    layer = iface.activeLayer()
+                    layer.startEditing()
+                    layer.beginEditCommand("Smooth Geometry")                     
             
-        layer.triggerRepaint()
-        iface.mapCanvas().refresh()
-        layer.endEditCommand()
+                    for f in layer.selectedFeatures():
+                        feat_to_change=[]
+                        g = f.geometry()
+                        
+                        
+                        sm = g.smooth(
+                        #iterations
+                        itera,
+                        #offset
+                        offset_new_value,
+                        #MinDistance
+                        mindistance_new_value,
+                        #maxAngle
+                        maxangle_new_value)                  
+                        
+                        feat_to_change.append(f.id())
+                        feat_to_change.append(sm)
+             
+                        layer.changeGeometry(feat_to_change[0],feat_to_change[1])
+                   
+                    
+                layer.triggerRepaint()
+                iface.mapCanvas().refresh()
+                layer.endEditCommand()
         
     def configure(self):
         dlg = ConfigureSmoothGeometryDialog(self.iface)
