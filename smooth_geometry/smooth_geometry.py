@@ -29,10 +29,9 @@ from qgis.PyQt.QtGui import *
 from PyQt5.QtGui import *
 from qgis.PyQt.QtWidgets import *
 from qgis.PyQt import uic
-from qgis.core import Qgis
-from qgis.core import QgsApplication, QgsMapLayer, QgsMessageLog
 from PyQt5.QtWidgets import QMessageBox
-from qgis.core import (QgsApplication,
+from qgis.core import (Qgis,
+                       QgsApplication,
                        QgsMapLayer,
                        QgsMessageLog,
                        QgsWkbTypes,
@@ -48,14 +47,10 @@ from qgis.core import (QgsApplication,
                        QgsUnitTypes,
                        QgsEditFormConfig)
                        
-
 from qgis.utils import iface
 
 # Initialize Qt resources from file resources.py
 from .resources import *
-# Import the code for the dialog
-from .smooth_geometry_dialog import SmoothGeometryDialog
-
 
 Ui_ConfigureSmoothGeometryDialogBase = uic.loadUiType(os.path.join(os.path.dirname(__file__), 'configuresmoothingbase.ui'))[0]
 
@@ -277,3 +272,10 @@ class SmoothGeometry:
             
             maxangle_new_value = dlg.boxMaxAngle.value()
             setMaxAngle(maxangle_new_value)
+            
+    
+
+
+
+    def dontdonothing(self):
+            pass

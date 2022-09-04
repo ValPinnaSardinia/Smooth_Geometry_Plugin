@@ -7,7 +7,7 @@ name=Smooth Geometry Tool
 qgisMinimumVersion=3.0
 description=This plugin smooth the selected geometries
 description[it]= Questo plugin smussa ed arrotonda le geometrie selezionate.
-version=1.0.2
+version=1.0.3
 author=Valerio Pinna
 email=pinnavalerio@yahoo.co.uk
 
@@ -23,7 +23,8 @@ repository=https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
 # changelog=1.0.2 Added an exception for starting the plugin on an empty project.
-
+			1.0.31 Minor improvements on GUI and folder structure
+			
 # Tags are comma separated with spaces allowed
 tags=python smooth geometry digitising
 
