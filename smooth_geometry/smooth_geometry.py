@@ -105,7 +105,6 @@ class ConfigureSmoothGeometryDialog (QDialog, Ui_ConfigureSmoothGeometryDialogBa
         self.boxMinDistance.setValue(minDistance())
         mindistance_new_value =minDistance()
         
-        
         self.boxMaxAngle.setValue(maxAngle())
         maxangle_new_value = maxAngle()
         
@@ -202,10 +201,6 @@ class SmoothGeometry:
        self.iface.removeToolBarIcon(self.toolBtnAction)
 
 
-    
-       
-      
-
     def run(self):
         
         settings = QSettings
@@ -214,6 +209,7 @@ class SmoothGeometry:
         mindistance_new_value= minDistance()
         maxangle_new_value=maxAngle()
         
+        ext_canvas = QgsGeometry.fromRect(iface.mapCanvas().extent())
         
         """Run method that performs all the real work"""
         layers_list = QgsProject.instance().mapLayers()
@@ -230,32 +226,42 @@ class SmoothGeometry:
                     layer = iface.activeLayer()
                     layer.startEditing()
                     layer.beginEditCommand("Smooth Geometry")                     
-            
-                    for f in layer.selectedFeatures():
-                        feat_to_change=[]
-                        g = f.geometry()
-                        
-                        
-                        sm = g.smooth(
-                        #iterations
-                        itera,
-                        #offset
-                        offset_new_value,
-                        #MinDistance
-                        mindistance_new_value,
-                        #maxAngle
-                        maxangle_new_value)                  
-                        
-                        feat_to_change.append(f.id())
-                        feat_to_change.append(sm)
-             
-                        layer.changeGeometry(feat_to_change[0],feat_to_change[1])
-                   
                     
-                layer.triggerRepaint()
-                iface.mapCanvas().refresh()
-                layer.endEditCommand()
-        
+                    checks_list = []
+                    for feature in layer.selectedFeatures():
+                        checks_list.append(feature.geometry().intersects(ext_canvas))
+                    if False in checks_list:
+                        reply = QMessageBox.warning(None,  'Smooth Geometry',
+                                                    'Some of the selected features are outside of the current map view. Would you still like to continue?',
+                                                    QMessageBox.Yes, QMessageBox.No)
+                        if reply == QMessageBox.No: 
+                            return self.dontdonothing()
+                                
+                        if reply == QMessageBox.Yes:
+                            for f in layer.selectedFeatures():
+                                
+                                feat_to_change=[]
+                                g = f.geometry()
+
+                                sm = g.smooth(
+                                #iterations
+                                itera,
+                                #offset
+                                offset_new_value,
+                                #MinDistance
+                                mindistance_new_value,
+                                #maxAngle
+                                maxangle_new_value)                  
+                                
+                                feat_to_change.append(f.id())
+                                feat_to_change.append(sm)
+                     
+                                layer.changeGeometry(feat_to_change[0],feat_to_change[1])
+                           
+                        layer.triggerRepaint()
+                        iface.mapCanvas().refresh()
+                        layer.endEditCommand()
+                
     def configure(self):
         dlg = ConfigureSmoothGeometryDialog(self.iface)
         dlg.exec_()
@@ -265,17 +271,13 @@ class SmoothGeometry:
             
             offset_new_value = dlg.boxOffset.value()
             setOffset(offset_new_value)
-            
-            
+
             mindistance_new_value = dlg.boxMinDistance.value()
             setMinDistance(mindistance_new_value)
             
             maxangle_new_value = dlg.boxMaxAngle.value()
             setMaxAngle(maxangle_new_value)
-            
-    
-
-
-
+ 
+ 
     def dontdonothing(self):
             pass
