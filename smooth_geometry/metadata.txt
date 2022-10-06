@@ -22,9 +22,9 @@ repository=https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-changelog=	1.1 Added warning message for selected features outside canvas extent.
-			1.0.3 Minor improvements on GUI and folder structure
-			1.0.2 Added an exception for starting the plugin on an empty project.
+changelog=1.1.1 Minor bug corrections.
+	1.0.3 Minor improvements on GUI and folder structure
+	1.0.2 Added an exception for starting the plugin on an empty project.
 		  
 			
 # Tags are comma separated with spaces allowed
