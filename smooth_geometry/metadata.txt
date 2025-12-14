@@ -1,31 +1,40 @@
 # This file contains metadata for your plugin.
-
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
 name=Smooth Geometry Tool
 qgisMinimumVersion=3.0
-description=This plugin smooth the selected geometries
-description[it]= Questo plugin smussa ed arrotonda le geometrie selezionate.
-version=1.1
+qgisMaximumVersion=4.99
+supportsQt6=True
+description=Smooths selected vector geometries using configurable smoothing parameters.
+version=1.2.0
 author=Valerio Pinna
 email=pinnavalerio@yahoo.co.uk
 
-about=This plugin smooths the selected geometries. A configuration dialog permits to change the smoothing settings (iterations, offset, minimumDistance and maxAngle). Suggested default starting configuration: Iterations = 1 Offset = 0.3 MinimumDistance = -1 MaxAngle = 180
-about[it]=Questo plugin smussa ed arrotonda le geometrie selezionate. Un pannello di configurazione consente di cambiare i parametri di smussatura: (iterations, offset, minimumDistance and maxAngle). La configurazione di partenza consigliata: Iterations = 1 Offset = 0.3 MinimumDistance = -1 MaxAngle = 180
+about=Smooth Geometry Tool allows you to smooth selected vector geometries directly in QGIS. A configuration dialog lets you control the smoothing behaviour using iterations, offset, minimum distance, and maximum angle, making it suitable for cartographic refinement and data cleaning workflows.
 
 tracker=https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin/issues
 repository=https://github.com/ValPinnaSardinia/Smooth_Geometry_Plugin
 # End of mandatory metadata
 
 # Recommended items:
-
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-changelog=1.1.1 Minor bug corrections.
-	1.0.3 Minor improvements on GUI and folder structure
-	1.0.2 Added an exception for starting the plugin on an empty project.
-		  
+changelog=<strong>1.2.0</strong>
+ - Code refactoring and stability improvements.
+ - Improved edit command handling and error management.
+ - Safer and more robust settings storage.
+ - Enhanced user feedback and messaging.
+ - Cleaned up deprecated and unused components.
+ - Confirmed compatibility with Qt6 and upcoming QGIS 4 releases.
+ <p><strong>1.1.1</strong>
+ - Minor bug corrections.
+ <p><strong>1.1</strong>
+ - Added warning message for selected features outside canvas extent.
+ <p><strong>1.0.3</strong>
+ - Minor improvements on GUI and folder structure.
+ <p><strong>1.0.2</strong>
+ - Added an exception for starting the plugin on an empty project.
 			
 # Tags are comma separated with spaces allowed
 tags=python smooth geometry digitising
